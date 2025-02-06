@@ -1,0 +1,23 @@
+<div class="container">
+    <div *ngIf="loading" class="text-center">
+      <h5 class="loading-text">Loading...</h5>
+    </div>
+  
+    <div *ngIf="!loading" class="product-detail-card">
+      <h1 class="product-title">{{ product?.title }}</h1>
+      <div class="product-detail-content">
+        <img [src]="product?.imageUrl" class="product-detail-img" alt="{{ product?.title }}">
+  
+        <div class="product-info">
+          <p><strong>ID:</strong> {{ product?.id }}</p>
+          <p><strong>Full Name:</strong> {{ product?.fullName }}</p>
+          <p><strong>First Name:</strong> {{ product?.firstName }}</p>
+          <p><strong>Last Name:</strong> {{ product?.lastName }}</p>
+          <p><strong>Family:</strong> {{ product?.family }}</p>
+          <p><strong>Image URL:</strong> {{ product?.imageUrl }}</p>
+        </div>
+      </div>
+      <a href="javascript:history.back()" class="btn btn-outline-light back-btn">Go Back</a>
+    </div>
+  </div>
+  

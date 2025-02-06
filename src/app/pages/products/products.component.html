@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="text-center mb-5">Characters</h1>
+  
+    <div class="row">
+      <div *ngFor="let product of productList" class="col-md-4 mb-4">
+        <div class="product-card">
+          <img [src]="product.imageUrl" class="product-img" alt="{{ product.title }}">
+          <div class="product-info">
+            <h4 class="product-title">{{ product.title }}</h4>
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              (click)="navegate(product.id)"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
